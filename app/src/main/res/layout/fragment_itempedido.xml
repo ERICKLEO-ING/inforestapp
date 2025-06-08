@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:gravity="start|center">
+
+
+        <LinearLayout
+            android:id="@+id/lleditaitempedido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center|start">
+            <ImageView
+                android:id="@+id/iv_edita_itempedido"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:src="@drawable/editar_20x20"
+                android:contentDescription="editar"/>
+            <TextView
+                android:id="@+id/tv_producto_itempedido"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start|center"
+                android:text="Lomo saltas as as dasd sd  asdasdasdspeci"
+                android:textColor="@color/colorText"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/llordenitem"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/boton_redondo_verde"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/tvordenitem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:src="@drawable/eliminar_24x24"
+                    android:text="1°"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"/>
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="30dp"
+                app:cardPreventCornerOverlap="false"
+                >
+                <ImageView
+                    android:id="@+id/iv_elimina_itempedido"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:src="@drawable/eliminar_24x24"
+                    android:contentDescription="editar"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_producto_modificadores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start|top"
+            android:textColor="@color/lightgray"
+            android:text="Lomo saltado a lo pobre e  asd  asdasdasdspecial\nCON papas fritas, SIN ají"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

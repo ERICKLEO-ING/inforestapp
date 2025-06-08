@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Contenedor centrado con ancho máximo y márgenes iguales -->
+    <LinearLayout
+        android:id="@+id/llDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/border_redondo_dialog"
+        android:elevation="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintWidth_max="450dp">
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona el monto"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"
+            android:gravity="center|start"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_efectivo1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_monto2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="false"
+                app:cardCornerRadius="@dimen/border_boton"
+                android:elevation="10dp"
+                app:cardUseCompatPadding="true">
+                <TextView
+                    android:id="@+id/tv_monto2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:text="2"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_monto5"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="false"
+                app:cardCornerRadius="@dimen/border_boton"
+                android:elevation="10dp"
+                app:cardUseCompatPadding="true">
+                <TextView
+                    android:id="@+id/tv_monto5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:text="5"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_monto10"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="false"
+                app:cardCornerRadius="@dimen/border_boton"
+                android:elevation="10dp"
+                app:cardUseCompatPadding="true">
+                <TextView
+                    android:id="@+id/tv_monto10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:text="10"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_monto20"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="false"
+                app:cardCornerRadius="@dimen/border_boton"
+                android:elevation="10dp"
+                app:cardUseCompatPadding="true">
+                <TextView
+                    android:id="@+id/tv_monto20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:text="20"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_monto_otro"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                app:cardPreventCornerOverlap="false"
+                app:cardCornerRadius="@dimen/border_boton"
+                android:elevation="10dp"
+                app:cardUseCompatPadding="true">
+                <TextView
+                    android:id="@+id/tv_monto_otro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:text="Otro"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_propina_manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="@color/colorPrimary" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputMonto"
+                style="@style/OutlinedTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa el monto"
+                app:endIconDrawable="@drawable/sin_mesa_30x30"
+                app:endIconMode="custom"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMonto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:maxLength="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvSeparador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="o"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginVertical="8dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPorcentaje"
+                style="@style/OutlinedTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Porcentaje"
+                app:endIconDrawable="@drawable/doc_pasivo_24x24"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPorcentaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/text_CANCELAR"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/btnAgregar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="AGREGAR"
+                android:textSize="18sp"
+                android:background="@drawable/boton_redondo"
+                android:backgroundTint="@color/lightgray"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

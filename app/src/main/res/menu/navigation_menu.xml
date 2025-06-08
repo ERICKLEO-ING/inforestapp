@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_cerrarsesion"
+        android:icon="@drawable/salir_rojo"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+    <item
+        android:id="@+id/nav_actualizar"
+        android:icon="@drawable/recargar_30x30"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+
+    <item
+        android:id="@+id/nav_buscar"
+        android:icon="@drawable/buscar_30x30"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+    <item
+        android:id="@+id/nav_sinmesa"
+        android:icon="@drawable/sin_mesa_30x30"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+    <item
+        android:id="@+id/nav_opciones"
+        android:icon="@drawable/menu_burger_30x30"
+        android:title=""
+        app:showAsAction="ifRoom|withText"/>
+
+</menu>

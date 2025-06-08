@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.VentaActivity">
+
+
+    <!-- Contenido principal de la actividad -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <!-- RecyclerView para salones -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_salones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- TextView para mostrar disponibilidad -->
+        <TextView
+            android:id="@+id/tv_disponibles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Disponibles: 11/60"
+            android:textSize="20sp"
+            android:gravity="center|start"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/rv_salones"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <EditText
+            android:id="@+id/et_buscar_salon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="@drawable/border_edit_text"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:inputType="text"
+            android:hint="Buscar Mesa"
+        android:scrollHorizontally="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/rv_salones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+        <!-- ScrollView para contenido dinámico (mesas) -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/tv_disponibles"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_mesas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </ScrollView>
+
+        <!-- Barra de navegación inferior -->
+
+
+        <!-- ProgressBar en el frente, para carga de contenido -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/navigation_menu"
+            app:labelVisibilityMode="unlabeled"
+            app:itemIconTint="@color/colorPrimary"/>
+
+<!--        &lt;!&ndash; Ícono del Megáfono flotante &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/ivMegafono"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:src="@drawable/sin_mesa_30x30"-->
+<!--            android:background="@drawable/sin_mesa_30x30"-->
+<!--            android:padding="4dp"-->
+<!--            android:elevation="4dp"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintTop_percent="0.10"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintEnd_margin="16dp"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_foro"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="200dp"
+        android:padding="15dp"
+        android:elevation="10dp"
+        android:src="@drawable/foro_24x24"
+        android:contentDescription="Close"
+        android:background="@drawable/border_redondoderecha_blanco"
+        android:clickable="true"
+        android:focusable="true"/>
+
+
+    <ProgressBar
+        android:id="@+id/pg_cargando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:padding="100dp"
+        android:indeterminate="true" />
+
+</FrameLayout>
+

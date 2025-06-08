@@ -1,0 +1,40 @@
+package com.infomatica.inforestapp.data.model
+
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
+data class PedidoModel(
+    @SerializedName("status") var status: Int=100,
+    @SerializedName("message") var mensaje: String="",
+    @SerializedName("codigopedido") var codigopedido: String = "",
+    @SerializedName("canalventa") val canalventa: String = "",
+    @SerializedName("codigomesa") val codigomesa: String = "",
+    @SerializedName("nombremesa") val nombremesa: String = "",
+    @SerializedName("monedapedido") val monedapedido: String = "S/.",
+    @SerializedName("pax") var pax: Int = 0,
+    @SerializedName("observacion") var observacion: String = "",
+    @SerializedName("detalle") var detalle: MutableList<ProductoModel> = mutableListOf(),
+    @SerializedName("clientes") var clientes: MutableList<String> = mutableListOf(),
+    @SerializedName("codigopedidotransferir") var codigopedidotransferir: String = "",
+    @SerializedName("observacionpedidotransferir") var observacionpedidotransferir: String = "",
+    @SerializedName("passwordsupervisor") var passwordsupervisor: String = "",
+    @SerializedName("impresionprecuenta") var impresionprecuenta: String = "",
+    @SerializedName("impresiondocumento") var impresiondocumento: String = "",
+    @SerializedName("prepagos") var prepagos: MutableList<PrepagoModel> = mutableListOf(),
+    @SerializedName("cliente") var clientefacturado: ClienteFacturadoModel = ClienteFacturadoModel(codigo=""),
+    @SerializedName("caja") val caja: String = "",
+    @SerializedName("cajafacturacion") var cajafacturacion: String = "",
+    @SerializedName("prefijofacturacion") var prefijofacturacion: String = "",
+    @SerializedName("codigodescuento") var codigodescuento: String = "",
+    @SerializedName("montodivision") var montodivision: Double = 0.0,
+    @SerializedName("clientedivision") var clientedivision: String = "",
+    var valorasignadodivision: Boolean = false,
+    var isdivisionmonto: Boolean = false,
+    @SerializedName("codigoimpresora") var codigoimpresora: String = "",
+    @SerializedName("numerocopia") var numerocopia: Int = 1,
+    @SerializedName("tamanoprinter") var tamanoprinter: Int = 32,
+    @SerializedName("imprimeprecuenta") var imprimeprecuenta: Boolean = false,
+    @SerializedName("imprimedocumento") var imprimedocumento: Boolean = false,
+    @SerializedName("facturado") var facturado: Boolean = false,
+    @SerializedName("itemsdivision") var itemsdivision: String = "",
+) : Serializable

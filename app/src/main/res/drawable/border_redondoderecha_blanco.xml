@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#CCFFFFFF" />
+
+    <!-- Solo redondear esquinas inferiores -->
+    <corners
+        android:bottomLeftRadius="@dimen/border_boton"
+        android:topLeftRadius="@dimen/border_boton"/>
+</shape>

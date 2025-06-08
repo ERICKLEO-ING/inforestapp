@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.DivisionActivity">
+
+    <!-- Contenedor principal -->
+    <LinearLayout
+        android:id="@+id/llcontenedor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:background="@color/ColorFondoPantalla"
+        android:gravity="top|center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/footer_layout"
+        app:layout_constraintWidth_percent="@fraction/Activity_width_percent">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTituloDivision"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_redondoinferior_verde"
+            android:padding="10dp"
+            android:text="División de facturación"
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+
+        <!-- Opciones de Tab -->
+        <LinearLayout
+            android:id="@+id/lltabtipofacturacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tabdivisionproducto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Por producto"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:background="@drawable/tab_selected" />
+
+            <TextView
+                android:id="@+id/tabdivisionmonto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Por monto"
+                android:textColor="@color/lightgray"
+                android:textSize="18sp"
+                android:background="@drawable/tab_unselected" />
+        </LinearLayout>
+
+        <!-- División de Pago (crece para llenar espacio) -->
+        <LinearLayout
+            android:id="@+id/lldivisionPago"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/tvdivisiontitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Selecciona los productos correspondientes para cada cliente."
+                android:paddingBottom="10dp"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerdivision"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <!-- Agregar cliente -->
+            <LinearLayout
+                android:id="@+id/llagregacliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pedido_mas_36x40"
+                    android:background="@drawable/border_verde" />
+
+                <TextView
+                    android:id="@+id/tvAnadirClientes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/anadirclientes"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Pie Total -->
+            <LinearLayout
+                android:id="@+id/ll_pie_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Total a pagar"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvmontototaldivision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/ 0.00"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Footer con botones -->
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/ColorFondoPie"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="@fraction/Activity_width_percent">
+
+        <TextView
+            android:id="@+id/tv_cancelar_division"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/text_VOLVER"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnrealizarcobro"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="match_parent"
+            android:text="REALIZAR COBRO"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/boton_redondo"
+            android:elevation="5dp"/>
+    </LinearLayout>
+
+    <!-- Indicador de carga -->
+    <ProgressBar
+        android:id="@+id/pg_cargando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:padding="100dp"
+        android:indeterminate="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

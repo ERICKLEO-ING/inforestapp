@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorSecondary">#79DD8B</color>
+    <color name="colorText">#FFFF</color> <!-- White text -->
+    <color name="ColorFondoPantalla">#232323</color>
+    <color name="ColorFondoPie">#232323</color>
+
+    <color name="lightgray">#FFFF</color>
+    <color name="ColorNeutral300">#F2F2F2</color>
+    <color name="Colorfullinactivo">#98ACB3</color>
+    <color name="ColorRojo200">#FFECEB</color>
+    <color name="ColorRojo400">#FFD6D3</color>
+    <color name="ColorRojo">#F54E42</color>
+</resources>

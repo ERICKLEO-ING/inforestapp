@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_oferta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="@dimen/border_boton"
+        app:cardPreventCornerOverlap="false">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/iv_oferta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="imagen"
+                android:src="@drawable/ver_imagen_36x36"
+                android:scaleType="centerCrop" />
+            <!-- Gradiente superpuesto -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/linear_gradiente" />
+         </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tvHoradia"
+            android:layout_width="wrap_content"
+            android:background="@drawable/border_redondoinferior_blanco"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/TextAzul900"
+            android:text="V-S-D 6:00AM-8:00PM"
+            android:layout_gravity="top|center"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|bottom"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_nombreoferta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Promo pizzas personales"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium" />
+            <TextView
+                android:id="@+id/tv_nombreofertaporcentaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center|bottom"
+                android:maxLines="1"
+                android:text="30% de descuento"
+                android:textSize="26sp"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- TextView para mostrar lo que se escribe -->
+    <TextView
+        android:id="@+id/tv_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/light_blue_A400"
+        android:textColor="@color/colorText"
+        android:textSize="24sp"
+        android:gravity="end"/>
+
+    <!-- Fila de números -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="10"
+        android:rowCount="1"
+        android:layout_marginTop="5dp">
+        <Button android:id="@+id/btn_1" style="@style/KeyButton" android:text="1"/>
+        <Button android:id="@+id/btn_2" style="@style/KeyButton" android:text="2"/>
+        <Button android:id="@+id/btn_3" style="@style/KeyButton" android:text="3"/>
+        <Button android:id="@+id/btn_4" style="@style/KeyButton" android:text="4"/>
+        <Button android:id="@+id/btn_5" style="@style/KeyButton" android:text="5"/>
+        <Button android:id="@+id/btn_6" style="@style/KeyButton" android:text="6"/>
+        <Button android:id="@+id/btn_7" style="@style/KeyButton" android:text="7"/>
+        <Button android:id="@+id/btn_8" style="@style/KeyButton" android:text="8"/>
+        <Button android:id="@+id/btn_9" style="@style/KeyButton" android:text="9"/>
+        <Button android:id="@+id/btn_0" style="@style/KeyButton" android:text="0"/>
+    </GridLayout>
+
+    <!-- Fila de letras 1 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="10"
+        android:rowCount="1">
+        <Button android:id="@+id/btn_q" style="@style/KeyButton" android:text="Q"/>
+        <Button android:id="@+id/btn_w" style="@style/KeyButton" android:text="W"/>
+        <Button android:id="@+id/btn_e" style="@style/KeyButton" android:text="E"/>
+        <Button android:id="@+id/btn_r" style="@style/KeyButton" android:text="R"/>
+        <Button android:id="@+id/btn_t" style="@style/KeyButton" android:text="T"/>
+        <Button android:id="@+id/btn_y" style="@style/KeyButton" android:text="Y"/>
+        <Button android:id="@+id/btn_u" style="@style/KeyButton" android:text="U"/>
+        <Button android:id="@+id/btn_i" style="@style/KeyButton" android:text="I"/>
+        <Button android:id="@+id/btn_o" style="@style/KeyButton" android:text="O"/>
+        <Button android:id="@+id/btn_p" style="@style/KeyButton" android:text="P"/>
+    </GridLayout>
+
+    <!-- Fila de letras 2 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="10"
+        android:rowCount="1">
+        <Button android:id="@+id/btn_a" style="@style/KeyButton" android:text="A"/>
+        <Button android:id="@+id/btn_s" style="@style/KeyButton" android:text="S"/>
+        <Button android:id="@+id/btn_d" style="@style/KeyButton" android:text="D"/>
+        <Button android:id="@+id/btn_f" style="@style/KeyButton" android:text="F"/>
+        <Button android:id="@+id/btn_g" style="@style/KeyButton" android:text="G"/>
+        <Button android:id="@+id/btn_h" style="@style/KeyButton" android:text="H"/>
+        <Button android:id="@+id/btn_j" style="@style/KeyButton" android:text="J"/>
+        <Button android:id="@+id/btn_k" style="@style/KeyButton" android:text="K"/>
+        <Button android:id="@+id/btn_l" style="@style/KeyButton" android:text="L"/>
+    </GridLayout>
+
+    <!-- Fila de letras 3 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="10"
+        android:rowCount="1">
+        <Button android:id="@+id/btn_z" style="@style/KeyButton" android:text="Z"/>
+        <Button android:id="@+id/btn_x" style="@style/KeyButton" android:text="X"/>
+        <Button android:id="@+id/btn_c" style="@style/KeyButton" android:text="C"/>
+        <Button android:id="@+id/btn_v" style="@style/KeyButton" android:text="V"/>
+        <Button android:id="@+id/btn_b" style="@style/KeyButton" android:text="B"/>
+        <Button android:id="@+id/btn_n" style="@style/KeyButton" android:text="N"/>
+        <Button android:id="@+id/btn_m" style="@style/KeyButton" android:text="M"/>
+    </GridLayout>
+
+    <!-- Fila de caracteres especiales -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="10"
+        android:rowCount="1">
+        <Button android:id="@+id/btn_amp" style="@style/KeyButton" android:text="&amp;"/>
+        <Button android:id="@+id/btn_dot" style="@style/KeyButton" android:text="."/>
+        <Button android:id="@+id/btn_dash" style="@style/KeyButton" android:text="-"/>
+        <Button android:id="@+id/btn_underscore" style="@style/KeyButton" android:text="_"/>
+        <Button android:id="@+id/btn_space" style="@style/KeyButton" android:text=" " android:layout_width="0dp" android:layout_height="wrap_content" android:layout_span="5"/>
+        <Button android:id="@+id/btn_delete" style="@style/KeyButton" android:text="⌫"/>
+    </GridLayout>
+
+</LinearLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.ForoActivity">
+
+    <!-- Contenedor tipo drawer alineado a la derecha -->
+    <LinearLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/ColorFondoPantalla"
+        android:elevation="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="@fraction/Activity_width_percent">
+
+        <!-- Título Foro -->
+        <LinearLayout
+            android:id="@+id/lltituloforo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="20dp">
+            <TextView
+                android:id="@+id/tvForoComunitario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/border_redondoinferior_azul"
+                android:text="Foro comunitario"
+                android:textSize="22sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <!-- Contenido scrollable -->
+        <ScrollView
+            android:id="@+id/sv_total"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- CARD: Recomendaciones -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardRecomendaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/recomendaciones_activo_24x24"
+                                app:tint="@color/lightgray"/>
+
+                            <TextView
+                                android:id="@+id/tvRecomendaciones"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:paddingStart="10dp"
+                                android:text="Recomendaciones"
+                                android:textColor="@color/lightgray"
+                                android:textStyle="bold"
+                                android:textSize="18sp"/>
+
+                            <ImageView
+                                android:id="@+id/btnCollapseRecomendaciones"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/pedido_mas_36x40"
+                                app:tint="@color/TextAzul900"/>
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerRecomendaciones"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:nestedScrollingEnabled="false"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD: Ofertas -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardOfertas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/ivoferta"
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ofertas_activo_24x24"
+                                app:tint="@color/lightgray"/>
+
+                            <TextView
+                                android:id="@+id/tvOfertas"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:paddingStart="10dp"
+                                android:gravity="center|start"
+                                android:text="Ofertas"
+                                android:textColor="@color/lightgray"
+                                android:textStyle="bold"
+                                android:textSize="18sp"/>
+
+                            <ImageView
+                                android:id="@+id/btnCollapseOferta"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/pedido_mas_36x40"
+                                app:tint="@color/TextAzul900"/>
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerOfertas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD: Mensajes Internos -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardMensajes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/ivmensajeinterno"
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/foro_24x24"/>
+
+                            <TextView
+                                android:id="@+id/tvMensajesInternos"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:paddingStart="10dp"
+                                android:text="Mensajes internos"
+                                android:textColor="@color/TextAzul900"
+                                android:textStyle="bold"
+                                android:textSize="18sp"/>
+
+                            <ImageView
+                                android:id="@+id/btnCollapseMensajesInternos"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/pedido_menos_36x40"
+                                app:tint="@color/TextAzul900"/>
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerMensajes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Footer -->
+        <LinearLayout
+            android:id="@+id/footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ColorFondoPie"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_volver_foro"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/text_VOLVER"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ProgressBar superpuesto -->
+    <ProgressBar
+        android:id="@+id/pg_cargando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="100dp"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

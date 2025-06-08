@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTitulo_elige_mesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elige la mesa o pedido de destino"
+            android:textSize="18sp"
+            android:textColor="@color/colorText"
+            android:layout_marginBottom="16dp" />
+
+        <ListView
+            android:id="@+id/listView_mesas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="0dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

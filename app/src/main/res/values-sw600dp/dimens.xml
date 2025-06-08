@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="maxHeight">800dp</dimen>
+    <dimen name="padding_standard">16dp</dimen>
+
+    <dimen name="login_content_padding">300dp</dimen>
+<!--    <dimen name="login_logo_margin_top">80dp</dimen>-->
+
+    <!-- Dimensiones generales para login -->
+    <dimen name="salon_height">70dp</dimen>
+    <dimen name="salon_with">210dp</dimen>
+
+    <dimen name="border_boton">40dp</dimen>
+    <dimen name="border_boton_grande">20dp</dimen>
+    <dimen name="border_boton_10">10dp</dimen>
+    <item name="dialog_width_percent" type="fraction">85%</item>
+
+    <item name="Activity_width_percent" type="fraction">0.4</item>
+
+    <!--LOGIN-->
+    <dimen name="login_padding_horizontal">20dp</dimen>
+    <dimen name="login_logo_margin_top">20dp</dimen>
+    <dimen name="login_text_large">22sp</dimen>
+    <dimen name="login_text_medium">18sp</dimen>
+    <dimen name="login_field_height">60dp</dimen>
+    <dimen name="login_button_height">72dp</dimen>
+    <dimen name="login_vertical_spacing">30dp</dimen>
+</resources>

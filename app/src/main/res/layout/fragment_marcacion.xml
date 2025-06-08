@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Contenedor central con ancho máximo de 300dp y márgenes,
+         además de restricciones horizontales y verticales -->
+    <LinearLayout
+        android:id="@+id/llDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/border_redondo_dialog"
+        android:elevation="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintWidth_max="400dp">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Marcación de asistencia"
+            android:textSize="22sp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimary" />
+
+        <!-- Campo de contraseña -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputnumerooperacion"
+                style="@style/OutlinedTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa su contraseña"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etpassmarcacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:inputType="numberPassword"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textSize="18sp"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- Botones Aceptar / Cancelar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnAceptar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="ACEPTAR"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:background="@drawable/boton_redondo"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/btnCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/boton_redondo_blanco"
+                android:text="CANCELAR"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

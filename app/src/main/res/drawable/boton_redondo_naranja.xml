@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Use the colorAccent from your colors.xml file -->
+    <solid android:color="#F07B43" />
+
+    <!-- Define rounded corners, adjust the radius as needed -->
+    <corners android:radius="@dimen/border_boton" />
+
+    <!-- Optional: Set padding for button content -->
+</shape>

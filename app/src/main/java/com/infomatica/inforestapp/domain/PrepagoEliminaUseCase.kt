@@ -1,0 +1,11 @@
+package com.infomatica.inforestapp.domain
+
+import com.infomatica.inforestapp.data.DocumentoRepository
+import com.infomatica.inforestapp.data.model.PrepagoModel
+import javax.inject.Inject
+
+class PrepagoEliminaUseCase @Inject constructor(
+    private val repository: DocumentoRepository
+) {
+    suspend operator fun invoke(prepago: PrepagoModel): List<PrepagoModel> = repository.deletePrepago(prepago)
+}

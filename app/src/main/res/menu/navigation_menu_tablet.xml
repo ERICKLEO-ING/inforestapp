@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navatrastablet"
+        android:icon="@drawable/home_30x30"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+
+    <item
+        android:id="@+id/navforotablet"
+        android:icon="@drawable/foro_24x24"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+    <item
+        android:id="@+id/navsinmesatablet"
+        android:icon="@drawable/editar_mesa_30x30"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+    <item
+        android:id="@+id/navopcionestablet"
+        android:icon="@drawable/menu_burger_30x30"
+        android:title=""
+        app:showAsAction="ifRoom|withText"/>
+
+</menu>

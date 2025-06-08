@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_cerrarsesionpedido"
+        android:icon="@drawable/salir_rojo"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+    <item
+        android:id="@+id/nav_atras"
+        android:icon="@drawable/home_30x30"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+
+    <item
+        android:id="@+id/nav_carrito"
+        android:icon="@drawable/bolsa_pasivo_30x30"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+
+    <item
+        android:id="@+id/nav_buscar_producto"
+        android:icon="@drawable/buscar_30x30"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+    <item
+        android:id="@+id/nav_menupedido"
+        android:icon="@drawable/editar_mesa_30x30"
+        app:showAsAction="ifRoom|withText"
+        android:title="" />
+</menu>

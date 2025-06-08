@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#79DD8B</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightgray">#88919E</color>
+    <color name="lightgray_600">#A7B1BF</color>
+    <color name="light_blue_600">#42C67E</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#79DD8B</color>
+    <color name="light_blue_A400">#A6E5C3</color>
+
+    <!-- Define your colors -->
+    <color name="colorPrimary">#42C67E</color> <!-- Green color for accents and buttons -->
+    <color name="colorSecondary">#79DD8B</color> <!-- Same green as primary for consistency -->
+    <color name="colorBackground">#F2FBF7</color> <!-- White background -->
+    <color name="colorBackground2">#A6E5C3</color> <!-- verde background -->
+    <color name="colorText">#1E2947</color> <!-- Black text -->
+    <color name="colorTextWhite">#F2FBF7</color> <!-- White background -->
+    <color name="colorBlack">#232323</color> <!-- Black text -->
+    <color name="ColorFondoPantalla">#FFFFFFFF</color>
+
+    <color name="ColorFondoPie">#F8F9FC</color>
+    <color name="TextAzul900">#2664C7</color>
+    <color name="celeste200">#E3F4F9</color>
+    <color name="celeste900">#2D94B4</color>
+
+    <color name="full900">#38A86B</color>
+    <color name="full200">#EAFAF1</color>
+
+    <color name="ColorNeutral300">#F2F2F2</color>
+    <color name="ColorNeutral400">#E2E5E8</color>
+    <color name="Colorfullinactivo">#98ACB3</color>
+    <color name="ColorRojo200">#FFECEB</color>
+    <color name="ColorRojo400">#FFD6D3</color>
+    <color name="ColorRojo">#F54E42</color>
+    <color name="ColorTranslucido">#33000000</color>
+</resources>

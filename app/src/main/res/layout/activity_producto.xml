@@ -1,0 +1,342 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.ProductoActivity">
+    <!-- Background image -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_producto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintWidth_percent="@fraction/Activity_width_percent">
+
+        <FrameLayout
+            android:id="@+id/fl_imagen_producto"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <ImageView
+                android:id="@+id/ivproducto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="imagen"
+                android:scaleType="centerCrop" />
+
+            <!-- Gradiente superpuesto -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/linear_gradiente" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btn_cerrar_detallepedido"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|top"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="X"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:background="@drawable/boton_redondo"
+            android:contentDescription="Close" />
+
+        <Button
+            android:id="@+id/btnmodificarprecio"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|top"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="10dp"
+            android:text="$"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:background="@drawable/boton_redondo"
+            android:contentDescription="Close" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_observacion_pedido"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|top"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="25sp"
+            android:elevation="10dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:text="."
+                android:backgroundTint="@color/TextAzul900"
+                android:background="@drawable/obs_pasivo_24x24"
+                android:contentDescription="Observación" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvOrdenItem"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|top"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            app:cardPreventCornerOverlap="false"
+            android:background="@color/colorBackground2"
+            app:cardCornerRadius="25sp"
+            android:elevation="10dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/tvOrdenItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="1°"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:inputType="number"
+                android:background="@color/colorBackground2"
+                android:textColor="@color/colorPrimary"
+                android:contentDescription="Orden" />
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tv_nombreproducto_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:textColor="@color/white"
+            android:maxLines="2"
+            android:layout_margin="16dp"
+            android:text="Lomo saltado a lo pobre especial"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-medium" />
+    </androidx.cardview.widget.CardView>
+    <!-- Imagen del plato -->
+    <!-- CardView con imagen de fondo -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvalertacontenedor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/ColorRojo400"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="@fraction/Activity_width_percent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <!-- Icono de alerta -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/alerta_24x24"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:background="@color/ColorRojo"
+                android:layout_height="match_parent">
+
+            </View>
+            <!-- Contenedor de texto -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvalertatitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plato crítico"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvalertamensaje"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consec"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <!-- Botón de cerrar -->
+            <ImageButton
+                android:id="@+id/btncerraralerta"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cerrar_24x24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/ColorRojo"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!-- Título y descripción -->
+    <LinearLayout
+        android:id="@+id/linear_titulo_descripcion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/ColorFondoPantalla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview_producto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="@fraction/Activity_width_percent">
+
+        <TextView
+            android:id="@+id/tv_descripcionproductodialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:text="Carne de res 130g en trozos, con verduras salteadas al wok, 1 plátano frito, 1 huevo, papas a elección y arroz blanco."
+            android:textSize="18sp"
+            android:padding="5dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:elevation="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <!-- comensales -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_spinner_clientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            app:cardUseCompatPadding="true"
+            >
+            <Spinner
+                android:id="@+id/spinner_clientes"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/colorPrimary"
+                android:popupElevation="10dp"
+                android:textAlignment="textStart"
+                android:layout_height="50dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_detallmodificadores"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_weight="1" />
+        <EditText
+            android:id="@+id/tv_observacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="¿Tienes alguna observación?"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:maxLength="100"
+            android:gravity="center|start"
+            android:scrollbars="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:background="@drawable/border_edit_text"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:elevation="5dp"
+            android:background="@android:color/darker_gray"/>
+        <!-- Cantidad y botón de agregar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <ImageButton
+                        android:id="@+id/btn_disminuye"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pedido_menos_36x40"
+                        android:contentDescription="Menos"
+                        android:background="?attr/selectableItemBackgroundBorderless" />
+                    <TextView
+                        android:id="@+id/tv_cantidadproducto"
+                        android:layout_width="58dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="9999.999"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:focusable="true"
+                        android:cursorVisible="true"
+                        android:background="@null"
+                        android:imeOptions="actionDone"
+                        android:importantForAccessibility="yes"/>
+                    <ImageButton
+                        android:id="@+id/btn_incrementa"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pedido_mas_36x40"
+                        android:contentDescription="Mas"
+                        android:background="?attr/selectableItemBackgroundBorderless" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_agregarproducto"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginStart="5dp"
+                android:text="Agregar S/XX.00"
+                android:textColor="@color/white"
+                android:background="@drawable/boton_redondo"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pg_cargando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:padding="100dp"
+        android:indeterminate="true"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

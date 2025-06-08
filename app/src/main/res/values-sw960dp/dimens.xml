@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--LOGIN-->
+    <dimen name="login_padding_horizontal">20dp</dimen>
+    <dimen name="login_logo_margin_top">20dp</dimen>
+    <dimen name="login_text_large">26sp</dimen>
+    <dimen name="login_text_medium">22sp</dimen>
+    <dimen name="login_field_height">80dp</dimen>
+    <dimen name="login_button_height">90dp</dimen>
+    <dimen name="login_vertical_spacing">40dp</dimen>
+
+    <item name="Activity_width_percent" type="fraction">0.4</item>
+
+</resources>

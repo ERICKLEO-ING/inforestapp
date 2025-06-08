@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- Restaurant Title -->
+    <TextView
+        android:id="@+id/tv_restaurant_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boton_redondo"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:text="La Victoria Restobar"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <!-- User Info -->
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Martín Fiestas"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_user_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cajero"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"/>
+<!--    <CheckBox-->
+<!--        android:id="@+id/cb_vercuentas"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:text="Ver todas las cuentas."-->
+<!--        android:enabled="false"-->
+<!--        android:buttonTint="@color/colorPrimary"/>-->
+    <TextView
+        android:id="@+id/tv_vercuentas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cajero"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="8dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!-- Menu Items -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Menu Item - My Shift -->
+        <LinearLayout
+            android:id="@+id/ll_mi_turno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/turno_24x24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Mi turno"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Other menu items follow the same structure as above -->
+        <!-- My Orders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/pedido_24x24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Mis pedidos"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_cerrar_sesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/salir_24x24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Cerrar Sesión"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <!-- Repeat similar layouts for "Mis documentos", "Configuración", and "Cerrar Sesión" -->
+
+    </LinearLayout>
+
+    <!-- Table Status Legend -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Estados de mesa:"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:src="@drawable/leyenda_280x40"/>
+    <!-- Table Statuses -->
+
+
+    <!-- Footer and Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:src="@drawable/powered_by_132x28"
+        android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/tv_relleno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:text=""
+            android:textSize="16sp" />
+    <!-- Next Button -->
+    <ImageButton
+        android:id="@+id/btn_salir"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:src="@drawable/atras_60x60"/>
+    </LinearLayout>
+</LinearLayout>
