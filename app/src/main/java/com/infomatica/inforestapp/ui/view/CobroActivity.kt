@@ -212,7 +212,7 @@ class CobroActivity : BaseActivity(), PrepagoAdapter.ItemClickListener {
     }
     // Click  para eleccion  de Item pedido
     override fun onItemClickElimina(details: PrepagoModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
             val titulo = "¿Desea eliminar el prepago?"
             val descripcion=""

@@ -128,7 +128,7 @@ class DivisionProductoFragment : BottomSheetDialogFragment(), DivisionProductoAd
         return listaConSubitems
     }
     override fun onItemClick(details: ProductoModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
         }
     }

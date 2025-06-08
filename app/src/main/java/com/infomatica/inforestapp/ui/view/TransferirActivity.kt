@@ -263,13 +263,13 @@ class TransferirActivity : BaseActivity(), TransferirPedidoAdapter.ItemClickList
 //        }
     }
     override fun onItemClick(details: ProductoModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
         }
     }
 
     override fun onItemClick(details: MesasModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
             mesaATransferir = it
             binding.btnElegirMesaTransferencia.isEnabled = true

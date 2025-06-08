@@ -144,7 +144,7 @@ class MensajeMeseroActivity : BaseActivity(), MensajeMeseroAdapter.ItemClickList
         })
     }
     override fun onItemClick(details: MensajeMeseroModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
             binding.btnenviarmensajemesero.isEnabled = true
             binding.etObservacion.setText("")

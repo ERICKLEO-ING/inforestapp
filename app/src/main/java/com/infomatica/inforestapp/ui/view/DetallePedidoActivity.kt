@@ -336,7 +336,7 @@ class DetallePedidoActivity : BaseActivity(),
     }
     // Click  para eleccion  de Item pedido
     override fun onItemClickProducto(details: ProductoModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
             productoSeleccionado = details
 
@@ -344,7 +344,7 @@ class DetallePedidoActivity : BaseActivity(),
     }
     // Click  para eleccion  de Item pedido para ordenamiento
     override fun onItemClickOrden(details: ProductoModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
             productoSeleccionado = details
 
@@ -360,7 +360,7 @@ class DetallePedidoActivity : BaseActivity(),
         }
     }
     override fun onItemClickElimina(details: ProductoModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
             productoSeleccionado = details
             if (!details.isimpreso){
@@ -373,7 +373,7 @@ class DetallePedidoActivity : BaseActivity(),
         }
     }
     override fun onItemClickEdita(details: ProductoModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
             if (details.isimpreso){
 

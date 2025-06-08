@@ -10,8 +10,8 @@ import com.infomatica.inforestapp.ui.viewmodel.QuoteViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
+ * Ejemplo de actividad a pantalla completa que muestra y oculta la interfaz del sistema
+ * (barra de estado y barra de navegación) mediante la interacción del usuario.
  */
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

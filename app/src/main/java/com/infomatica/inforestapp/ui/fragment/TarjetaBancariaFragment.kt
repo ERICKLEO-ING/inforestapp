@@ -77,7 +77,7 @@ class TarjetaBancariaFragment private constructor(
 
     }
     override fun onItemClick(details: TarjetaBancariaModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
             onResult(it.codigo)
             dismiss()

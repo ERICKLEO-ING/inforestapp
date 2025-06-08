@@ -87,7 +87,7 @@ class ImpresoraCajaFragment private constructor(
 
     }
     override fun onItemClick(details: ImpresoraCajaModel?) {
-        // Handle the item click event here
+        // Manejar el evento de clic del elemento aquí
         details?.let {
             selectImpresoraCaja = it
             binding.btnaceptarimpresora.isEnabled = true
