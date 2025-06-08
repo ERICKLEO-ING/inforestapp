@@ -36,7 +36,7 @@ class TarjetaBancariaAdapter(
         }
 
         override fun areContentsTheSame(oldItem: TarjetaBancariaModel, newItem: TarjetaBancariaModel): Boolean {
-            return oldItem == newItem // Compara todo el contenido
+            return oldItem == newItem // Compara el contenido
         }
     }
 }

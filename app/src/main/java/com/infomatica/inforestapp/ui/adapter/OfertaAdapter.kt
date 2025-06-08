@@ -33,7 +33,7 @@ class OfertaAdapter(
         }
 
         override fun areContentsTheSame(oldItem: OfertaModel, newItem: OfertaModel): Boolean {
-            return oldItem == newItem // Compara todo el contenido
+            return oldItem == newItem // Compara el contenido
         }
     }
 }

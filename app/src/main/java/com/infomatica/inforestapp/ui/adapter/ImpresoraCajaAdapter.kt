@@ -59,7 +59,7 @@ class ImpresoraCajaAdapter(
         }
 
         override fun areContentsTheSame(oldItem: ImpresoraCajaModel, newItem: ImpresoraCajaModel): Boolean {
-            return oldItem == newItem // Compara todo el contenido
+            return oldItem == newItem // Compara el contenido
         }
     }
 }

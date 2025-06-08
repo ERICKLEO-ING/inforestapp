@@ -30,7 +30,7 @@ class AlertaAdapter(
         }
 
         override fun areContentsTheSame(oldItem: AlertasModel, newItem: AlertasModel): Boolean {
-            return oldItem == newItem // Compara todo el contenido
+            return oldItem == newItem //Compara el contenido
         }
     }
 }

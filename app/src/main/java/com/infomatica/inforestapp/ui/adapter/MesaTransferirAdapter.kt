@@ -57,7 +57,7 @@ class MesaTransferirAdapter(
         }
 
         override fun areContentsTheSame(oldItem: MesasModel, newItem: MesasModel): Boolean {
-            return oldItem == newItem // Compara todo el contenido
+            return oldItem == newItem // Compara el contenido
         }
     }
 }

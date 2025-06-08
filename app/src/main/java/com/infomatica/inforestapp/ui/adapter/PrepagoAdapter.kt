@@ -48,7 +48,7 @@ class PrepagoAdapter(
         }
 
         override fun areContentsTheSame(oldItem: PrepagoModel, newItem: PrepagoModel): Boolean {
-            return oldItem == newItem // Compara todo el contenido
+            return oldItem == newItem // Compara el contenido
         }
     }
 }

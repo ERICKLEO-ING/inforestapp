@@ -58,7 +58,7 @@ class MensajeMeseroAdapter(
         }
 
         override fun areContentsTheSame(oldItem: MensajeMeseroModel, newItem: MensajeMeseroModel): Boolean {
-            return oldItem == newItem // Compara todo el contenido
+            return oldItem == newItem // Compara el contenido
         }
     }
 }

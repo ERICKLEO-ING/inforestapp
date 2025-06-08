@@ -299,7 +299,7 @@ open class BaseActivity : AppCompatActivity() {
                 textoArriba = lineas.take(indiceQR).joinToString("\n") // Líneas antes de "IMPQR"
                 textoAbajo = lineas.drop(indiceQR + 1).joinToString("\n") // Líneas después de "IMPQR"
             } else {
-                textoArriba = texto // Si no hay "IMPQR", todo el texto se queda en textoArriba
+                textoArriba = texto // Si no hay "IMPQR", el texto se queda en textoArriba
             }
             val bluetoothAdapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
             if (bluetoothAdapter == null || !bluetoothAdapter.isEnabled) {

@@ -155,7 +155,7 @@ class DivisionFacturacionAdapter(
         }
 
         override fun areContentsTheSame(oldItem: PedidoModel, newItem: PedidoModel): Boolean {
-            return oldItem == newItem // Compara todo el contenido
+            return oldItem == newItem // Compara el contenido
         }
     }
 }

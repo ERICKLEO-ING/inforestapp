@@ -63,7 +63,7 @@ class DescuentoAdapter(
         }
 
         override fun areContentsTheSame(oldItem: MotivoDescuentoModel, newItem: MotivoDescuentoModel): Boolean {
-            return oldItem == newItem // Compara todo el contenido
+            return oldItem == newItem // Compara el contenido
         }
     }
 }
