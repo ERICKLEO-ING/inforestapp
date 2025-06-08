@@ -1,5 +1,6 @@
 import android.content.Context
 import android.content.SharedPreferences
+import com.infomatica.inforestapp.BuildConfig
 
 object LocalStore {
     private const val PREF_NAME = "AppPreferences"
@@ -17,7 +18,7 @@ object LocalStore {
     }
     fun getBaseUrl(context: Context): String {
         val preferences: SharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
-        return preferences.getString(BASE_URL_KEY, "http://161.132.106.116/api/") ?: "http://161.132.106.116/api/"
+        return preferences.getString(BASE_URL_KEY, BuildConfig.BASE_URL) ?: BuildConfig.BASE_URL
     }
 
     fun savePrinterBluetooth(context: Context, dato: String) {

@@ -13,20 +13,18 @@ import javax.inject.Singleton
 import javax.net.ssl.SSLContext
 import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
+import com.infomatica.inforestapp.BuildConfig
 @Module
 @InstallIn(SingletonComponent::class)
 object RetrofitHelper {
     // Método para obtener Retrofit con la configuración de OkHttpClient incluida
     @Singleton
     fun getRetrofitInstance(context: Context): Retrofit {
-        var baseUrl: String
-        try {
-            baseUrl = LocalStore.getBaseUrl(context)
+        val baseUrl: String = try {
+            LocalStore.getBaseUrl(context)
         } catch (ex: Exception) {
-            baseUrl = "http://161.132.106.116/api/"
+            BuildConfig.BASE_URL
         }
-
-        //baseUrl = "http://161.132.106.116/api/"
 
         val okHttpClient = createOkHttpClient()
         return Retrofit.Builder()

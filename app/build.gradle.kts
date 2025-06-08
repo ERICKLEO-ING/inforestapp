@@ -6,6 +6,8 @@ plugins {
     id("kotlin-parcelize")
 }
 
+val BASE_URL: String by project
+
 android {
     namespace = "com.infomatica.inforestapp"
     compileSdk = 34
@@ -16,6 +18,8 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+
+        buildConfigField("String", "BASE_URL", "\"$BASE_URL\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -39,6 +43,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
