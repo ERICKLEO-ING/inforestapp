@@ -78,4 +78,10 @@ class ParametroService @Inject constructor(
             response.body()?: emptyList()
         }
     }
+    suspend fun  getCajaMesero(): List<ImpresoraCajaModel>{
+        return withContext(Dispatchers.IO){
+            val response = api.getCajaMesero()
+            response.body()?: emptyList()
+        }
+    }
 }

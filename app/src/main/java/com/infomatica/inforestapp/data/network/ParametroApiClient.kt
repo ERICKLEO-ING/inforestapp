@@ -46,4 +46,7 @@ interface ParametroApiClient {
 
     @GET("parametro/tipoidentidad")
     suspend fun getTipoIdentidad(): Response<List<TipoIdentidadModel>?>
+
+    @GET("parametro/cajamesero")
+    suspend fun getCajaMesero(): Response<List<ImpresoraCajaModel>?>
 }

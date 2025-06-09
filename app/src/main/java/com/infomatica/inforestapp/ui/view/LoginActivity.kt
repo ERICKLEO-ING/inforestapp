@@ -111,17 +111,14 @@ class LoginActivity : BaseActivity() {
                     getWifiInfo()
                 }
             }
-//            binding.logoImageView.setOnClickListener{
-//                modificarApiUrl++
-//                if (modificarApiUrl>7){
-//                    modal_CambiarUrlApi()
-//                    modificarApiUrl = 0
-//                } else {
-//                    if (modificarApiUrl>3){
-//                        showToast("Esta a ${8-modificarApiUrl} para modificar la api!")
-//                    }
-//                }
-//            }
+            binding.cajaAutoComplete.setOnItemClickListener { parent, view, position, id ->
+                val cajaSeleccionada = loginViewModel.resultCajaMesero.value?.get(position)
+                val codigo = cajaSeleccionada?.codigo
+                val descripcion = cajaSeleccionada?.descripcion
+
+                // Puedes usar estos valores según necesites
+                Toast.makeText(this, "Seleccionaste: $descripcion (Código: $codigo)", Toast.LENGTH_SHORT).show()
+            }
 
             binding.tvMarcacion.setOnClickListener {
                 val fragmentTag = "MarcacionFragment"
@@ -240,11 +237,6 @@ class LoginActivity : BaseActivity() {
 
 
                     var url = "http://imgfz.com/i/DRo6LgX.jpeg"
-//                    if (it != null) {
-//                        if (!it.urlapp.isNullOrEmpty()){
-//                            url = it.urlapp
-//                        }
-//                    }
                     Glide.with(this)
                         .load(url)
                         .placeholder(R.drawable.ver_imagen_36x36)
@@ -264,8 +256,11 @@ class LoginActivity : BaseActivity() {
 
                     }
                 }
-
-
+            }
+            loginViewModel.resultCajaMesero.observe(this){
+                val descripciones = it?.map { it.descripcion }
+                val adapter = descripciones?.let { it1 -> ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, it1.toMutableList()) }
+                binding.cajaAutoComplete.setAdapter(adapter)
             }
 
         } catch (e: Exception) {

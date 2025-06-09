@@ -62,5 +62,9 @@ class ParametroRepository @Inject constructor(
         val response = service.getTipoIdentidad()
         return response
     }
+    suspend fun getCajaMesero():List<ImpresoraCajaModel>{
+        val response = service.getCajaMesero()
+        return response
+    }
 }
 

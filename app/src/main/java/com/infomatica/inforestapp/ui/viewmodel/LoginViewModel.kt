@@ -3,11 +3,13 @@ package com.infomatica.inforestapp.ui.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.infomatica.inforestapp.data.model.ImpresoraCajaModel
 import com.infomatica.inforestapp.data.model.LoginModel
 import com.infomatica.inforestapp.data.model.ParametrosModel
 import com.infomatica.inforestapp.data.model.ResponseModel
 import com.infomatica.inforestapp.data.model.UsuarioModel
 import com.infomatica.inforestapp.data.network.ParametroService
+import com.infomatica.inforestapp.domain.ListaCajaMeseroUseCase
 import com.infomatica.inforestapp.domain.LoginUseCase
 import com.infomatica.inforestapp.domain.MarcacionUseCase
 import com.infomatica.inforestapp.domain.ParametroUseCase
@@ -19,13 +21,16 @@ import javax.inject.Inject
 class LoginViewModel @Inject constructor(
     private val loginUseCase: LoginUseCase,
     private  val parametroUseCase: ParametroUseCase,
-    private  val marcacionUseCase: MarcacionUseCase
+    private  val marcacionUseCase: MarcacionUseCase,
+    private  val cajameseroUseCase: ListaCajaMeseroUseCase
 ) : ViewModel() {
 
     val usuarioModel = MutableLiveData<UsuarioModel?>()
     val respuestaMarcacion = MutableLiveData<ResponseModel?>()
     val isLoading = MutableLiveData<Boolean>()
     var resultParametrosModel = MutableLiveData<ParametrosModel?>()
+    var resultCajaMesero = MutableLiveData<List<ImpresoraCajaModel>?>()
+
     fun onCreate() {
         viewModelScope.launch {
             try{
@@ -35,6 +40,9 @@ class LoginViewModel @Inject constructor(
                 result.let {
                     resultParametrosModel.postValue(it)
                 }
+
+                fetchCajaMesero()
+
             } catch (ex: Exception){
                println("error: ${ex.message}" )
             }
@@ -53,6 +61,21 @@ class LoginViewModel @Inject constructor(
             } catch (e: Exception) {
                 e.printStackTrace() // Muestra el error en Logcat
                 usuarioModel.value = null // Asigna null en caso de error
+            } finally {
+                isLoading.value = false // Detiene el loader en todos los casos
+            }
+        }
+    }
+    fun fetchCajaMesero() {
+        viewModelScope.launch {
+            isLoading.value = true
+            try {
+
+                val result = cajameseroUseCase()
+                resultCajaMesero.value = result
+            } catch (e: Exception) {
+                e.printStackTrace() // Muestra el error en Logcat
+                resultCajaMesero.value = null // Asigna null en caso de error
             } finally {
                 isLoading.value = false // Detiene el loader en todos los casos
             }
